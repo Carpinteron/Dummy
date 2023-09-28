@@ -20,7 +20,9 @@ public class IntroD extends javax.swing.JFrame {
         setUndecorated(true);
         setIconImage(new ImageIcon(getClass().getResource("Icons/logobeta.png")).getImage());
         setBackground(new Color(0, 0, 0, 0));
+       
         initComponents();
+      
         setLocationRelativeTo(null);
         this.setVisible(false);
         asignarfuenteBUNGEE(labelusuario, 12f);
@@ -58,6 +60,7 @@ public class IntroD extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -66,9 +69,11 @@ public class IntroD extends javax.swing.JFrame {
         });
 
         panelRound1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         error.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         error.setText("Contraseña o Usuario incorrecto");
+        panelRound1.add(error, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 304, -1, -1));
 
         userr.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         userr.setForeground(new java.awt.Color(51, 51, 51));
@@ -84,6 +89,7 @@ public class IntroD extends javax.swing.JFrame {
                 userrActionPerformed(evt);
             }
         });
+        panelRound1.add(userr, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 228, 114, -1));
 
         passs.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         passs.setForeground(new java.awt.Color(51, 51, 51));
@@ -99,12 +105,15 @@ public class IntroD extends javax.swing.JFrame {
                 passsActionPerformed(evt);
             }
         });
+        panelRound1.add(passs, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 266, -1, -1));
 
         labelusuario.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         labelusuario.setText("INICIO DE SESIÓN");
+        panelRound1.add(labelusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 188, 137, 22));
 
         jLabel2.setFont(new java.awt.Font("Voice In My Head", 0, 48)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dummy sin fondo.png"))); // NOI18N
+        panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 230, 130));
 
         Register.setBackground(new java.awt.Color(204, 204, 255));
         Register.setText("Register");
@@ -114,6 +123,7 @@ public class IntroD extends javax.swing.JFrame {
                 RegisterActionPerformed(evt);
             }
         });
+        panelRound1.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 338, -1, -1));
 
         Login.setBackground(new java.awt.Color(204, 204, 255));
         Login.setText("Login");
@@ -123,6 +133,7 @@ public class IntroD extends javax.swing.JFrame {
                 LoginActionPerformed(evt);
             }
         });
+        panelRound1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 338, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cerrrar35.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -132,69 +143,19 @@ public class IntroD extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
-        panelRound1.setLayout(panelRound1Layout);
-        panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(Login)
-                                .addGap(18, 18, 18)
-                                .addComponent(Register))
-                            .addComponent(error)))
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(261, 261, 261)
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(userr, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(passs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(191, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(labelusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(userr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(passs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(error)
-                .addGap(18, 18, 18)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Login)
-                    .addComponent(Register))
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
+        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 0, 25, 22));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
