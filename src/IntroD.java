@@ -58,7 +58,7 @@ public class IntroD extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setUndecorated(true);
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -145,12 +145,10 @@ public class IntroD extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelRound1Layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
-                                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelRound1Layout.createSequentialGroup()
-                                        .addComponent(Login)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Register))
-                                    .addComponent(error)))))
+                                .addComponent(Login)
+                                .addGap(18, 18, 18)
+                                .addComponent(Register))
+                            .addComponent(error)))
                     .addGroup(panelRound1Layout.createSequentialGroup()
                         .addGap(261, 261, 261)
                         .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +156,7 @@ public class IntroD extends javax.swing.JFrame {
                             .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(userr, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(passs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -181,83 +179,87 @@ public class IntroD extends javax.swing.JFrame {
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Login)
                     .addComponent(Register))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
-        
-        String user2; 
-        String pass2;
-        
-        user2=userr.getText();
-        pass2=passs.getText();
-        
-        login (user2,pass2);
-        
-        if (hay == true){
-        
-        this.dispose();
-        IntroFrame a=new IntroFrame();
-        a.setVisible(true);
-    }
-        if (hay == false){
-        error.setVisible(true);
-        }
-        
-    
-        
-       
-    }//GEN-LAST:event_LoginActionPerformed
-
-    private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
-        String user1; 
-        String pass1;
-        user1=userr.getText();
-        pass1=passs.getText();
-        
-        register(user1,pass1);
-        
-        
-    }//GEN-LAST:event_RegisterActionPerformed
-
-    private void passsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passsActionPerformed
-         // elimina lo del text area 
-        passs.setText(null);
-    }//GEN-LAST:event_passsActionPerformed
-
-    private void userrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userrActionPerformed
-        // elimina lo del text area 
-        userr.setText(null);    }//GEN-LAST:event_userrActionPerformed
-
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         error.setVisible(false);
     }//GEN-LAST:event_formWindowOpened
 
-    private void userrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userrMouseClicked
-       userr.setText(null);
-    }//GEN-LAST:event_userrMouseClicked
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
+        String user1;
+        String pass1;
+        user1=userr.getText();
+        pass1=passs.getText();
+
+        register(user1,pass1);
+
+    }//GEN-LAST:event_RegisterActionPerformed
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+
+        String user2;
+        String pass2;
+
+        user2=userr.getText();
+        pass2=passs.getText();
+
+        login (user2,pass2);
+
+        if (hay == true){
+
+            this.dispose();
+            IntroFrame a=new IntroFrame();
+            a.setVisible(true);
+        }
+        if (hay == false){
+            error.setVisible(true);
+        }
+        
+        
+
+    }//GEN-LAST:event_LoginActionPerformed
+
+    private void passsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passsActionPerformed
+        // elimina lo del text area
+        passs.setText(null);
+    }//GEN-LAST:event_passsActionPerformed
 
     private void passsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passsMouseClicked
         passs.setText(null);
     }//GEN-LAST:event_passsMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void userrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userrActionPerformed
+        // elimina lo del text area
+    }//GEN-LAST:event_userrActionPerformed
+
+    private void userrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userrMouseClicked
+        userr.setText(null);
+    }//GEN-LAST:event_userrMouseClicked
 
     /**
      * @param args the command line arguments
