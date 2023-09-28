@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
 
@@ -17,6 +18,7 @@ public class IntroD extends javax.swing.JFrame {
      */
     public IntroD() {
         setUndecorated(true);
+        setIconImage(new ImageIcon(getClass().getResource("Icons/logobeta.png")).getImage());
         setBackground(new Color(0, 0, 0, 0));
         initComponents();
         setLocationRelativeTo(null);
@@ -153,9 +155,9 @@ public class IntroD extends javax.swing.JFrame {
                         .addGap(261, 261, 261)
                         .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(passs)
-                                .addComponent(userr)))))
+                            .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(userr, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(passs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(202, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
