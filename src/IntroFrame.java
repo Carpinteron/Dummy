@@ -92,7 +92,7 @@ public class IntroFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Voice In My Head", 0, 48)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.png"))); // NOI18N
 
-        user.setText("Nicolas");
+        user.setText("NOMBRE");
 
         jLabel4.setFont(new java.awt.Font("Voice In My Head", 0, 48)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/plz.png"))); // NOI18N

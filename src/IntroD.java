@@ -10,7 +10,6 @@ import java.io.PrintWriter;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
-
 public class IntroD extends javax.swing.JFrame {
 
     /**
@@ -18,18 +17,18 @@ public class IntroD extends javax.swing.JFrame {
      */
     public IntroD() {
         setUndecorated(true);
-        setBackground(new Color(0, 0, 0, 0));
+        setBackground(new Color(0, 60, 0, 0));
         setIconImage(new ImageIcon(getClass().getResource("Icons/logobeta.png")).getImage());
-       
-       
+
         initComponents();
-      
+
         setLocationRelativeTo(null);
-       // this.setVisible(false);
+        // this.setVisible(false);
         asignarfuenteBUNGEE(labelusuario, 12f);
         asignarfuenteBUNGEE(Login, 12f);
         asignarfuenteBUNGEE(Register, 12f);
     }
+
     //Funcion para asignar una fuenta a un label: fuente BUNGEE
     public static void asignarfuenteBUNGEE(JComponent component, float fontSize) {
         Font customFont = null;
@@ -43,7 +42,6 @@ public class IntroD extends javax.swing.JFrame {
             component.setFont(customFont.deriveFont(fontSize));
         }
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -60,19 +58,20 @@ public class IntroD extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 255, 102));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelRound1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         error.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         error.setText("Contraseña o Usuario incorrecto");
+        panelRound1.add(error, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 304, -1, -1));
 
         userr.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         userr.setForeground(new java.awt.Color(51, 51, 51));
@@ -88,6 +87,7 @@ public class IntroD extends javax.swing.JFrame {
                 userrActionPerformed(evt);
             }
         });
+        panelRound1.add(userr, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 250, 40));
 
         passs.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         passs.setForeground(new java.awt.Color(51, 51, 51));
@@ -103,12 +103,15 @@ public class IntroD extends javax.swing.JFrame {
                 passsActionPerformed(evt);
             }
         });
+        panelRound1.add(passs, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 250, 40));
 
         labelusuario.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         labelusuario.setText("INICIO DE SESIÓN");
+        panelRound1.add(labelusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 137, 22));
 
         jLabel2.setFont(new java.awt.Font("Voice In My Head", 0, 48)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dummy sin fondo.png"))); // NOI18N
+        panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 230, 130));
 
         Register.setBackground(new java.awt.Color(204, 204, 255));
         Register.setText("Register");
@@ -118,6 +121,7 @@ public class IntroD extends javax.swing.JFrame {
                 RegisterActionPerformed(evt);
             }
         });
+        panelRound1.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 338, -1, -1));
 
         Login.setBackground(new java.awt.Color(204, 204, 255));
         Login.setText("Login");
@@ -127,6 +131,7 @@ public class IntroD extends javax.swing.JFrame {
                 LoginActionPerformed(evt);
             }
         });
+        panelRound1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 338, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cerrrar35.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -136,60 +141,22 @@ public class IntroD extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 25, 22));
 
-        javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
-        panelRound1.setLayout(panelRound1Layout);
-        panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(640, 640, 640)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(261, 261, 261)
-                .addComponent(labelusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(261, 261, 261)
-                .addComponent(userr, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(261, 261, 261)
-                .addComponent(passs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(error))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(242, 242, 242)
-                .addComponent(Login)
-                .addGap(18, 18, 18)
-                .addComponent(Register))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
         );
-        panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(labelusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(userr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(passs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(error)
-                .addGap(18, 18, 18)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Login)
-                    .addComponent(Register)))
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 671, 401));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         error.setVisible(false);
     }//GEN-LAST:event_formWindowOpened
@@ -201,11 +168,11 @@ public class IntroD extends javax.swing.JFrame {
     private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
         String user1;
         String pass1;
-        user1=userr.getText();
-        pass1=passs.getText();
-
-        register(user1,pass1);
-
+        user1 = userr.getText();
+        pass1 = passs.getText();
+        register(user1, pass1);
+        passs.setText("");
+    
     }//GEN-LAST:event_RegisterActionPerformed
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
@@ -213,22 +180,21 @@ public class IntroD extends javax.swing.JFrame {
         String user2;
         String pass2;
 
-        user2=userr.getText();
-        pass2=passs.getText();
+        user2 = userr.getText();
+        pass2 = passs.getText();
 
-        login (user2,pass2);
+        login(user2, pass2);
 
-        if (hay == true){
+        if (hay == true) {
 
             this.dispose();
-            IntroFrame a=new IntroFrame(user2);
+            IntroFrame a = new IntroFrame(user2);
             a.setVisible(true);
         }
-        if (hay == false){
+        if (hay == false) {
             error.setVisible(true);
         }
-        
-        
+
 
     }//GEN-LAST:event_LoginActionPerformed
 
@@ -296,110 +262,111 @@ public class IntroD extends javax.swing.JFrame {
     private javax.swing.JTextField userr;
     // End of variables declaration//GEN-END:variables
 
+    // login 
+    boolean hay;
 
-
- // login 
- boolean hay;
-public boolean login(String user, String pass) {
-     hay = false;
-
-
-    try {
-        BufferedReader br = new BufferedReader(new FileReader("usuarios.txt"));
-        String line;
-        String passs;
-        while ((line = br.readLine()) != null) {
-            String temp[] = line.split("\t");
-            passs = temp[1];
-            passs = descifrado_password(passs);
-            System.out.println(passs);
-            if ( temp[0].trim().equals(user) && passs.equalsIgnoreCase(pass)) {
-                hay = true;
-
-                break; // Romper el bucle si se encuentra una coincidencia
-            }
-        }
-        
-        br.close();
-    } catch (IOException ex) {
-        ex.printStackTrace();
+    public boolean login(String user, String pass) {
         hay = false;
-    }
 
-    return hay;
-}
-private final String[] alfabeto = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n", "ñ","o","p","q","r","s","t","u","v","w","x","y","z","_","0","1","2","3","4","5","6","7","8","9",".","-","@","$","%","&","/","(",")","=","?","¿","¡","!","[","]","{","}","<",">",";",":","'","\"","*","+","~","^","`","|","°","¬"};
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("usuarios.txt"));
+            String line;
+            String passs;
+            while ((line = br.readLine()) != null) {
+                String temp[] = line.split("\t");
+                passs = temp[1];
+                passs = descifrado_password(passs);
+                System.out.println(passs);
+                if (temp[0].trim().equals(user) && passs.equalsIgnoreCase(pass)) {
+                    hay = true;
+
+                    break; // Romper el bucle si se encuentra una coincidencia
+                }
+            }
+
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            hay = false;
+        }
+
+        return hay;
+    }
+    private final String[] alfabeto = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "-", "@", "$", "%", "&", "/", "(", ")", "=", "?", "¿", "¡", "!", "[", "]", "{", "}", "<", ">", ";", ":", "'", "\"", "*", "+", "~", "^", "`", "|", "°", "¬"};
     private final String[] cifrado = {
-            "ñ", "k", "5", "m", "c", "y", "w", "o", "9", "q", "x", "s", "r", "v", "a", "2", "7", "1", "l", "i", "h", "!", "8", "b", "t", "z", "&", "0", "?", "d", "u", "p", "4", ".", "g", "n", "3", "$", "f", "(", "j", "}", "{", "*", "¬", "-", "|", "`", "~", ")", ":", "[", "]", "=", "'", "@", "¿", "¡", ";", "+", "^", "°", "/", "e", "\""
+        "ñ", "k", "5", "m", "c", "y", "w", "o", "9", "q", "x", "s", "r", "v", "a", "2", "7", "1", "l", "i", "h", "!", "8", "b", "t", "z", "&", "0", "?", "d", "u", "p", "4", ".", "g", "n", "3", "$", "f", "(", "j", "}", "{", "*", "¬", "-", "|", "`", "~", ")", ":", "[", "]", "=", "'", "@", "¿", "¡", ";", "+", "^", "°", "/", "e", "\""
     };
 
-public String cifrado_password(String pass){
-    String digito;
-StringBuilder newpass = new StringBuilder();
-    for (int i = 0; i < pass.length(); i++) {
-        digito =pass.substring(i, i+1);
-        for (int j = 0; j < alfabeto.length; j++) {
-            if (digito.equals(alfabeto[j])) {
-                newpass.append(cifrado[j]);
+    public String cifrado_password(String pass) {
+        String digito;
+        StringBuilder newpass = new StringBuilder();
+        for (int i = 0; i < pass.length(); i++) {
+            digito = pass.substring(i, i + 1);
+            for (int j = 0; j < alfabeto.length; j++) {
+                if (digito.equals(alfabeto[j])) {
+                    newpass.append(cifrado[j]);
+                }
             }
+
         }
-
-    }
-    return newpass.toString();
-}
-public String descifrado_password(String pass){
-    String digito;
-    StringBuilder newpass = new StringBuilder();
-    for (int i = 0; i < pass.length(); i++) {
-        digito =pass.substring(i, i+1);
-        for (int j = 0; j < cifrado.length; j++) {
-            if (digito.equals(cifrado[j])) {
-                newpass.append(alfabeto[j]);
-            }
-        }
-
-    }
-    return newpass.toString();
-}
-
-public boolean no_repit(String user) {
-    boolean hay = false;
-
-    try {
-        BufferedReader br = new BufferedReader(new FileReader("usuarios.txt"));
-        String line;
-
-        while ((line = br.readLine()) != null) {
-            String temp[] = line.split("\t");
-
-            if (temp.length == 3 && temp[0].trim().equals(user)) {
-                hay = true;
-                break; // Romper el bucle si se encuentra una coincidencia
-            }
-        }
-
-        br.close();
-    } catch (IOException ex) {
-        ex.printStackTrace();
-        hay = false;
+        return newpass.toString();
     }
 
-    return hay;
-}
+    public String descifrado_password(String pass) {
+        String digito;
+        StringBuilder newpass = new StringBuilder();
+        for (int i = 0; i < pass.length(); i++) {
+            digito = pass.substring(i, i + 1);
+            for (int j = 0; j < cifrado.length; j++) {
+                if (digito.equals(cifrado[j])) {
+                    newpass.append(alfabeto[j]);
+                }
+            }
+
+        }
+        return newpass.toString();
+    }
+
+    public boolean no_repit(String user) {
+        boolean hay = false;
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("usuarios.txt"));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String temp[] = line.split("\t");
+
+                if (temp.length == 3 && temp[0].trim().equals(user)) {
+                    hay = true;
+                    break; // Romper el bucle si se encuentra una coincidencia
+                }
+            }
+
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            hay = false;
+        }
+
+        return hay;
+    }
+
     public boolean register(String user, String pass) {
         boolean registrado = false;
-            pass = cifrado_password(pass);
-            try {
-                FileWriter archivo = new FileWriter("usuarios.txt",true);
-                PrintWriter registrar_usuario = new PrintWriter(archivo);
-                registrar_usuario.println(user +"\t"+ pass);
-                registrar_usuario.close();
-                registrado = true;
-                //logica
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            return registrado;
+        pass = cifrado_password(pass);
+        try {
+            FileWriter archivo = new FileWriter("usuarios.txt", true);
+            PrintWriter registrar_usuario = new PrintWriter(archivo);
+            registrar_usuario.println(user + "\t" + pass);
+            registrar_usuario.close();
+            registrado = true;
+            
+            //logica
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return registrado;
 
     }
 }
