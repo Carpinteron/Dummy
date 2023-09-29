@@ -21,15 +21,19 @@ public class IntroFrame extends javax.swing.JFrame {
     /**
      * Creates new form IntroFrame
      */
-    public IntroFrame() {
-        
+     private String USER;
+    public IntroFrame(String name) {
+         this.USER = name;
         
         setUndecorated(true);
-        setIconImage(new ImageIcon(getClass().getResource("Icons/logobeta.png")).getImage());
         setBackground(new Color(0, 0, 0, 0));
+        setIconImage(new ImageIcon(getClass().getResource("Icons/logobeta.png")).getImage());
+        
         initComponents();
         setLocationRelativeTo(null);
        asignarfuenteBUNGEE(user, 12f);
+   
+       user.setText(USER);
         
         
        
@@ -203,7 +207,7 @@ public class IntroFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IntroFrame().setVisible(true);
+                new IntroFrame(null).setVisible(true);
             }
         });
     }
