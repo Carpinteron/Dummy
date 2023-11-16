@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
-
+// aaaa
 public class IntroD extends javax.swing.JFrame {
 
     /**
